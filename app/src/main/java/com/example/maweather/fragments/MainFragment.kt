@@ -135,6 +135,7 @@ class MainFragment : Fragment() {
                 )
             list.add(item)
         }
+        model.liveDataList.value = list
         return list
     }
 
@@ -150,9 +151,6 @@ class MainFragment : Fragment() {
             weatherItem.hours
         )
         model.liveDataCurrent.value = item
-        Log.d("MyLog", "City: ${item.maxTemp}")
-        Log.d("MyLog", "Time: ${item.minTemp}")
-        Log.d("MyLog", "Time: ${item.hours}")
     }
 
     companion object {
