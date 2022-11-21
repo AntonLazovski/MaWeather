@@ -34,10 +34,10 @@ class MainActivity : AppCompatActivity() {
             {response->
                 val obj = JSONObject(response)
                 val temp = obj.getJSONObject("current")
-                Log.d("My log", "Volley error: ${temp.getString("temp_c")}")
+                Log.d("MyLog", "Volley error: ${temp.getString("temp_c")}")
             },
             {
-                Log.d("My log", "Volley error: $it")
+                Log.d("MyLog", "Volley error: $it")
             }
         )
         queue.add(stringRequest)
